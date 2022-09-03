@@ -26,12 +26,12 @@ package com.github.alturkovic.lock.example.configuration;
 
 import com.github.alturkovic.lock.example.service.HelloService;
 import com.github.alturkovic.lock.example.service.LockedHelloService;
-import com.github.alturkovic.lock.jdbc.configuration.EnableJdbcDistributedLock;
+import com.github.alturkovic.lock.redis.configuration.EnableRedisDistributedLock;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@EnableJdbcDistributedLock
+@EnableRedisDistributedLock
 public class ApplicationConfiguration {
 
   @Bean

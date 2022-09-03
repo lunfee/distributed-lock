@@ -31,6 +31,7 @@ import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 
 /**
+ * 使用模板方法模式
  * An abstract lock used as a base for all locks that operate with only 1 key instead of multiple keys.
  */
 @Data

@@ -24,12 +24,14 @@
 
 package com.github.alturkovic.lock.example.service;
 
-import com.github.alturkovic.lock.jdbc.alias.JdbcLocked;
+import com.github.alturkovic.lock.Interval;
+import com.github.alturkovic.lock.redis.alias.RedisLocked;
+import java.util.concurrent.TimeUnit;
 
 public class LockedHelloService implements HelloService {
 
   @Override
-  @JdbcLocked(expression = "#name")
+  @RedisLocked(expiration = @Interval(value = "100", unit = TimeUnit.SECONDS))
   public String sayHello(final String name) {
     return "Hello " + name + "!";
   }
